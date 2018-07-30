@@ -1,0 +1,16 @@
+/*
+ public class transpose {
+    public static void main(String[] args){
+      ArrayList<Class> myArray= {1,2,3,4.....}
+      ArrayList<Class> ls= new ArrayList ArrayList<Class>;
+      if(Integer a : myArray){
+      myArray.remove(a);
+      myarray.imput(a);
+      return myarray;}
+      else{
+       for(i=0; i<myArray.length; i++){
+       ls.add[myarray(i)];
+       }
+       ls.add[a];
+       return ls;}}}
+

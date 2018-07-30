@@ -1,0 +1,13 @@
+public class  binarysearch {
+  public static int[] Binary(A,K){
+    l= -1;
+    r= A.length;
+  while (l+1 != r) { // Stop when l and r meet
+    i = (l+r)/2; // Check middle of remaining subarray
+    if (k == A[i]) return i; // Found it
+    else if (k < A[i]) r = i; // In left half
+    else l = i; // In right half
+ }
+ return A.length; // Search value not in A
+} 
+ 

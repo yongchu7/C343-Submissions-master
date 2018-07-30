@@ -1,0 +1,76 @@
+//
+
+// 2
+//compression ratio : (2*50% + 2*35% + 2*10% + 2*5%)/(1* 50% + 2*35% + 3*10% + 3*5%)
+// = (1 + 0.7 + 0.2 + 0.1)/(0.5 + 0.7 + 0.3 + 0.15) = 2/1.65=1.212
+
+// 3 
+import java.io.*;
+import java.util.*;
+
+public class EDC {
+   public static int minDistance(String string1, String string2) {
+    int len1 = string1.length();
+    int len2 = string2.length();
+   
+    int[][] dp = new int[len1 + 1][len2 + 1];
+    
+    for (int i = 0; i <= len1; i++) {
+      dp[i][0] = i;
+    }
+    
+    for (int j = 0; j <= len2; j++) {
+      dp[0][j] = j;
+    }
+    
+ 
+    for (int i = 0; i < len1; i++) {
+      char c1 = string1.charAt(i);
+      for (int j = 0; j < len2; j++) {
+        char c2 = string2.charAt(j);
+        
+        //if last two chars equal
+        if (c1 == c2) {
+          //update dp value for +1 length
+          dp[i + 1][j + 1] = dp[i][j];
+        } else {
+          int replace = dp[i][j] + 1;
+          int insert = dp[i][j + 1] + 1;
+          int delete = dp[i + 1][j] + 1;
+          
+          int min = replace > insert ? insert : replace;
+          min = delete > min ? min : delete;
+          dp[i + 1][j + 1] = min;
+        }
+      }
+    }
+    
+    return dp[len1][len2];
+  }
+  
+  public static String[] readStr(String filePath) {
+    try{
+      final File file = new File(filePath);
+      final Scanner scanner = new Scanner(file);
+      String[] result = new String[2];
+      int index=0;
+      while(scanner.hasNext()) {
+        result[index] = scanner.nextLine();
+        index+=1;
+      }
+      return result;
+    }catch (Exception e) {
+      System.out.println("sorry");
+      return null;
+    }
+  }
+  
+  
+  public static void main(String[] args){
+    final String[] strs = readStr("/Users/51565/Desktop/HW6/string.txt");
+    System.out.println(strs[0]);
+    System.out.println(strs[1]);
+    System.out.println(minDistance(strs[0], strs[1]));
+  }
+}
+

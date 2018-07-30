@@ -1,0 +1,20 @@
+/*
+for this problem it have
+0:
+1:
+2:
+3:
+4:
+5:
+6:
+we put this four number 3, 12, 9, 2 to the hashfunction h(k) = k mod 7
+it would be changed and filled:
+0:
+1:
+2:9
+3:3
+4:2
+5:12
+6:
+if next number k returns2--6, this k would be filled in 6, the rest number would be filled in 0 and 1, so that we know 
+the poosibility of k appeared is on 6

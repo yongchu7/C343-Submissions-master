@@ -1,0 +1,48 @@
+public class countingsort {
+  public static int[] CountingSort(int[] A){
+  int max = max(A)+1;
+int[] c = new int[max];
+  for (int i = 0; i < A.length; i++) {
+     c[A[i]] += 1;
+}
+  
+
+for (int i = 1; i < max; i++){
+     c[i] += c[i-1];
+}
+int[] sorted = new int[A.length];
+  
+  for (int i = A.length-1; i >= 0; i--){
+    int v = A[i];
+    int count = c[v];
+    sorted[count-1] = v;
+    c[v] -= 1;
+  }
+  return sorted;
+  }
+  
+  public static int max (int[] A) {
+    int max = -1;
+    for (int i = 0; i < A.length; i+=1) {
+      if(A[i] > max){
+        max = A[i];
+      }
+    }
+    return max;
+  }
+  
+  public static void printArr(int[] A) {
+    int len = A.length;
+    for(int index=0; index<len; index+=1) {
+      System.out.print(A[index]);
+      System.out.print(" ");
+    }
+    System.out.println();
+  }
+  
+  public static void main(String[] argv) {
+    int[] arr = new int[] {1,2,1,0,3,4,5,1,2,4,5,6,1};
+   
+    printArr(CountingSort(arr));
+  }
+}

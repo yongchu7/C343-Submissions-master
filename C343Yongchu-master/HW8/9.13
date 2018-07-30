@@ -1,0 +1,16 @@
+/*
+a,it is not a good hash function.
+because if n is 2 slot, when the k is 10,k/n = 5, we can not put the k to the hashtable.---bad hash function
+
+b.whatever k is ,its return would be one. Which means that we put the number to hashtable without any judgement, if it is on 
+the open hashtable, it would put it on an array  on the first slots. if it is on the close hashtable, the number would be added up
+line by line. In this case, if we put the unsorted number into hashtable, it is still hard to serach ,only for number by number.
+----so that it is a bad hash table function
+
+c.it is not a good hash function
+because random(n) is a uncertain, assume that the n is 5, so that when you insert the number to the hashtable, maybe random(5) is 
+4, when you search (have the same k),random(5) may be 3, so that we will get the different number when insert and search.
+--bad hash function
+
+d.it is a good mod, it is a normal way to build up a hashtable.
+

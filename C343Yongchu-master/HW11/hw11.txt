@@ -1,0 +1,50 @@
+﻿11.16
+
+
+
+This problem is the same as the Floyd method implemented
+ in our lab. We only need to set the starting node as U and get all neighbors of U ,and then get all possible paths of the graph.
+
+
+
+
+11.17
+
+
+
+3->2->4->6->5
+         
+         |
+         
+         1
+         
+
+
+11.23
+
+
+Dijkstra’s algorithm will produce a spanning tree. However, this spanning tree
+ is not necessarily for the minimum cost.
+ 
+For example 
+
+A --> B  weight 4   
+            
+A --> C  weight 3
+            
+B --> C  weight 2
+
+The MST is A->C, B->C ,which costs 5  but Dijkastra’s algorithm is A->C, A->B which costs 7
+
+abstract:
+Cognitive dysfunction in Multiple Sclerosis (MS) is closely related to altered functional brain network topology. Conventional network analyses to compare groups are hampered by differences in network size, density and suffer from normalization problems. We therefore computed the Minimum Spanning Tree (MST), a sub-graph of the original network, to counter these problems. We hypothesize that functional network changes analysed with MSTs are important for understanding cognitive changes in MS and that changes in MST topology also represent changes in the critical backbone of the original brain networks. Here, resting-state magnetoencephalography (MEG) recordings from 21 early MS patients and 17 age-, gender-, and education-matched controls were projected onto atlas-based regions-of-interest (ROIs) using beamforming. The phase lag index was applied to compute functional connectivity between regions, from which a graph and subsequently the MST was constructed. Results showed lower global integration in the alpha2 (10–13 Hz) and beta (13–30 Hz) bands in MS patients, whereas higher global integration was found in the theta band. Changes were most pronounced in the alpha2 band where a loss of hierarchical structure was observed, which was associated with poorer cognitive performance. Finally, the MST in MS patients as well as in healthy controls may represent the critical backbone of the original network. Together, these findings indicate that MST network analyses are able to detect network changes in MS patients, which may correspond to changes in the core of functional brain networks. Moreover, these changes, such as a loss of hierarchical structure, are related to cognitive performance in MS.
+In this cross-sectional study, MS patients and healthy controls underwent MEG, MRI, neuropsychological assessment and neurological examination on the same day. As outcome measures we used MST metrics, cognition and neurological status.
+  An MRI scan was obtained from all subjects, using a 3 T-MRI system (GE Signa HDXT V15m). A 2D dual-echo T2-weighted sequence (TR9680 ms, TE 22/112 ms) and T1-weighted sequence (TR 475 ms, TE
+9 ms) were obtained with 48 slices of 3 mm and 3D-T1 heavily T1-weighted sequence (FSPGR, TR 7.8 ms, TE 3.0 ms, TI 450 ms) with1 mm, slices covering the entire brain. All scans were inspected by anexperienced rater (MMS).
+MSTs were dissimilar between RRMS patients and controls in the theta band (Wilcoxon signed rank tests (Z(36) = -2.7, p = 0.006),alpha2 band (Z(36) = -4.2 p b 0.001) and beta band (Z(36) = -3.6
+p b 0.001)). Especially in the alpha2 band it can be visually inspectedthat the MST is different in RRMS patients compared to healthy controls
+By applying minimum spanning tree analyses in MEG source-space we were able to identify functional brain network differences betweenearly RRMS patients and healthy controls. These differences were most pronounced in the alpha2 band, where the MSTs in RRMS patients were characterised by a larger eccentricity and lower leaf fraction and ‘tree hierarchy’. Clinically relevant, this lower ‘tree hierarchy’ in the alpha2 band was associated with poorer cognitive performance in RRMS patients. Importantly, in both RRMS patients and healthy controls there was a trend towards the presence of the strong disorder limit, indicating that changes in topology of MSTs in RRMS patients may
+correspond to changes in the core of the functional networks constituted by the union of all shortest paths.
+Firstly, dissimilarity measures were calculated for RRMS patients and healthy controls in each frequency band separately and compared with a Wilcoxon signed rank test as the data were generally not normally distributed. If there was a significant difference in dissimilarity between the MST of RRMS patients and healthy controls, then global MST descriptives between these groups were compared with the Mann–Whitney test. For each frequency band separately, graph theoretical outcome measures were corrected for multiple comparisons by the false detection rate (i.e. correcting for 7 MST measures per frequency band)
+for each epoch and frequency band separately we estimated α and other parameters (a and b, see ‘strong disorder limit’section) with the nonlinear least squares method. Together with α we
+used goodness of fit R2 as an outcome measure for each fit. These analyses were done in Matlab v2011.

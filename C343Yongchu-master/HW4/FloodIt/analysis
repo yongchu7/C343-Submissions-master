@@ -1,0 +1,2 @@
+analysis:
+the function is finding the color of 4 direction and then check with the flood list, so the time complexity t(n)is cn, which c is a constant number.
